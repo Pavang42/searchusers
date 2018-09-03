@@ -9,11 +9,11 @@
 			Search : <input type="text" ng-model="searchUser"><br/><br/>
 			<input type="button" value="Search" ng-click="searchUsers()"/>
 			<div ng-show="userFound">
-				Avatar_url : <img ng-src="{{avatar_url}}" alt="{{avatar_url}}" height="100" width="100"/> <br/> 
-				Followers : {{followers}} <br/>
-				Following : {{following}} <br/>
-				Created_at : {{created_at}} <br/>
-				Repos-url : <input type="button" value="{{repos_url}}" ng-click="loadRepos()"> 
+				Avatar_url : <img ng-src="{{userDetails.avatar_url}}" alt="{{userDetails.avatar_url}}" height="100" width="100"/> <br/> 
+				Id : {{userDetails.id}} <br/>
+				Is Site Admin? : {{userDetails.site_admin}} <br/>
+				Created_at : {{userDetails.created_at}} <br/>
+				Repos-url : <input type="button" value="{{userDetails.repos_url}}" ng-click="loadRepos()"> 
 			</div>
 			<div>
 				<span ng-show="error_message" style="color:red">Please enter other user name</span>

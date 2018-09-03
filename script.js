@@ -23,12 +23,8 @@ var app = angular.module("searchApp",[])
 						$scope.error_message = false;
 						var date = new Date('2009-04-02');
 						$scope.userFound = true;
-						$scope.avatar_url = entry.avatar_url;
-						$scope.followers = entry.followers;
-						$scope.following = entry.following;
-						$scope.created_at = date.toString();
-						$scope.repos_url = entry.repos_url;
-						}
+						$scope.userDetails = entry;
+					}
 					if(found == 0){
 						$scope.userFound = false;
 						$scope.error_message = true;
